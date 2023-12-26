@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <time.h>
 
-#define WIDTH 1920   // New width
-#define HEIGHT 1080   // New height
+#define WIDTH 1920*2   // New width
+#define HEIGHT 1080*2   // New height
 
 // Function to count alive neighbors
 int countAliveNeighbors(bool (*cells)[WIDTH], int x, int y) {
@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
     // Randomly initialize cells
     for (int y = 0; y < HEIGHT; y++) {
         for (int x = 0; x < WIDTH; x++) {
-            cells[y][x] = (rand() % 100) < 5; // approximately 5% chance
+            cells[y][x] = (rand() % 100) < 25; // approximately 5% chance
         }
     }
 
